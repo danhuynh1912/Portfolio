@@ -4,7 +4,8 @@ body {
     sans-serif; */
     /* font-family: 'Mitr', sans-serif !important; */
     /* font-family: 'Bai Jamjuree', sans-serif !important; */
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
+    /* font-family: 'Roboto', sans-serif !important; */
     background:rgb(48 110 156 / 12%) !important;
 }
 
@@ -15,7 +16,7 @@ body {
 }
 
 header {
-    background-image: url("../IMG/myImg5.png");
+    background-image: url("../IMG/myImg6.png");
     background-repeat: no-repeat;
     height: 800px;
     background-size: contain;
@@ -120,7 +121,7 @@ header {
 
 .menu a {
     color: #ffc3a0;
-    margin-left: 50px
+    margin-left: 40px
 }
 
 .menu a:hover {
