@@ -182,11 +182,18 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     padding: 30px;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(1rem);
+    animation: fade-up-long 1.2s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .img-left {
     border-radius: 10px;
     padding: 0 !important;
+    animation: fadeOpa .7s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .img-left img{
@@ -196,13 +203,59 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
 
 .item {
-    box-shadow:
+    text-align: center;
+    position: relative;
+}
+
+.item::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+        box-shadow:
   0 0px 10.5px rgba(0, 0, 0, 0.036),
   0 0px 387px rgba(0, 0, 0, 0.06)
 ;
     background: rgba(255, 255, 255, 0.5);
-    text-align: center;
+    z-index: -1;
     border-radius: 10px;
+    animation: openRight 1.2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.item1::after {
+    animation-delay: .6s;
+}
+
+.item2::after {
+    animation-delay: .7s;
+}
+
+.item3::after {
+    animation-delay: .9s;
+}
+
+.item4::after {
+    animation-delay: 1s;
+}
+
+@keyframes openRight {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeOpa {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* projects */
@@ -262,6 +315,21 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     }
 }
 
+@keyframes fade-up-long {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-20px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 @keyframes move2 {
     0% {
         bottom: -30px
@@ -309,6 +377,9 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     height: 530px;
     position: relative;
     transition: all 0.2s ease-in-out;
+    animation: fade-up-long 1.2s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .proitem:hover {
