@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+ @keyframes load {
+	 0% {
+		 stroke-dashoffset: 0;
+	}
+}
+ .progress1 {
+	 position: relative;
+	 display: grid;
+     grid-template-columns: auto auto;
+     row-gap: 20px;
+     column-gap: 20px;
+     padding: 0;
+    padding-left: 20px !important;
+}
+ .skill {
+	 display: inline-block;
+	 position: relative;
+	 text-align: center;
+	 color: #93a2ac;
+	 font-family: Lato;
+	 font-weight: 100;
+	 margin: 14px;
+}
+ .skill:before {
+	 content: attr(data-name);
+	 position: absolute;
+	 width: 100%;
+	 bottom: 3rem;
+	 font-weight: 400;
+}
+ .skill:after {
+	 content: attr(data-percent);
+	 position: absolute;
+	 width: 100%;
+	 top: 3rem;
+	 left: 0;
+	 font-size: 2rem;
+	 text-align: center;
+}
+ .progress1 svg {
+	 width: 10rem;
+	 height: 10rem;
+}
+ .progress1 svg:nth-child(2) {
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 transform: rotate(-90deg);
+}
+ .progress1 svg:nth-child(2) path {
+	 fill: none;
+	 stroke-width: 25;
+	 stroke-dasharray: 629;
+	 stroke: #fff;
+	 opacity: 0.9;
+	 animation: load 10s;
+}
+ 
